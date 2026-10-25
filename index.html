@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Ticket - Iniciar Sesión</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Íconos de FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Encabezado / Menú Navegación -->
+  <header>
+    <div class="logo-header">
+      <img src="logofinal.png" alt="Easy Ticket Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Categorías</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li>
+          <a href="index.html" class="btn-nav-login">
+            <i class="fa-regular fa-user"></i> Iniciar sesión
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenedor Principal -->
+  <main class="main-wrapper">
+    
+    <!-- Lado Izquierdo: Eslogan y Categorías -->
+    <div class="hero-content">
+      <img src="logofinal.png" alt="Easy Ticket Logo" class="hero-logo">
+      <h1>Tu próxima experiencia cultural</h1>
+      <h2>Empieza aquí</h2>
+      <p>Conecta con la música, el teatro, el arte y mucho más. Encuentra y asegura tus boletos en un solo lugar.</p>
+      
+      <div class="category-bar">
+        <div class="cat-box">
+          <i class="fa-regular fa-calendar-days"></i>
+          <span>Eventos</span>
+        </div>
+        <div class="cat-box">
+          <i class="fa-solid fa-music"></i>
+          <span>Música</span>
+        </div>
+        <div class="cat-box">
+          <i class="fa-solid fa-masks-theater"></i>
+          <span>Teatro</span>
+        </div>
+        <div class="cat-box">
+          <i class="fa-solid fa-landmark"></i>
+          <span>Arte</span>
+        </div>
+        <div class="cat-box">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Cultura</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lado Derecho: Tarjeta de Iniciar Sesión -->
+    <div class="card-container">
+      <div class="auth-card">
+        <h2>Iniciar sesión</h2>
+        <p class="card-subtitle">Ingresa con tu cuenta para continuar</p>
+        
+        <form action="#" method="POST">
+          <div class="input-field">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" placeholder="Correo electrónico" required>
+          </div>
+
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="loginPassword" placeholder="Contraseña" required>
+            <i class="fa-regular fa-eye toggle-eye" onclick="togglePasswordVisibility('loginPassword')"></i>
+          </div>
+
+          <div class="form-options">
+            <label><input type="checkbox"> Recordar mi cuenta</label>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button type="submit" class="btn-submit">Iniciar sesión</button>
+          <button type="button" class="btn-google">Continuar con Google</button>
+        </form>
+
+        <div class="divider"></div>
+
+        <div class="card-footer">
+          ¿No tienes una cuenta? <a href="registro.html" class="blue-link">Regístrate</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imagen Multitud.png en la página de inicio -->
+    <img src="Multitud.png" alt="Silueta de multitud en concierto" class="crowd-img">
+  </main>
+
+  <!-- Banner Inferior de Garantías -->
+  <section class="features-banner">
+    <div class="feature-box">
+      <i class="fa-solid fa-ticket"></i>
+      <div class="feature-text">
+        <strong>Compra segura</strong>
+        <span>Tus datos y pagos son protegidos</span>
+      </div>
+    </div>
+    <div class="feature-box">
+      <i class="fa-solid fa-bolt"></i>
+      <div class="feature-text">
+        <strong>Proceso rápido</strong>
+        <span>Tu entrada en pocos clics</span>
+      </div>
+    </div>
+    <div class="feature-box">
+      <i class="fa-regular fa-heart"></i>
+      <div class="feature-text">
+        <strong>Vive la experiencia</strong>
+        <span>Eventos de todo tipo para todos los gustos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2026 Easy Ticket | Proyecto POU. Todos los derechos reservados. Universidad Centro Americana Jose Simeon Cañas</p>
+    <div class="social-links">
+      <a href="#"><i class="fa-solid fa-e"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    function togglePasswordVisibility(id) {
+      const input = document.getElementById(id);
+      input.type = input.type === 'password' ? 'text' : 'password';
+    }
+  </script>
+</body>
+</html>
