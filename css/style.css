@@ -277,6 +277,18 @@ nav a:hover {
 
 .form-options a:hover, .blue-link:hover {
   text-decoration: underline;
+   .form-options-terms {
+  font-size: 0.74rem;
+}
+
+.terms-label {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.terms-label input {
+  margin-top: 2px;
 }
 
 /* Botones */
