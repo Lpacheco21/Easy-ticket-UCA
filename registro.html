@@ -15,7 +15,7 @@
     <div class="logo-header">
       <img src="img/logofinal.png" alt="Easy Ticket Logo">
     </div>
-    <nav>
+    <nav aria-label="Navegación principal">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="#">Eventos</a></li>
@@ -23,7 +23,7 @@
         <li><a href="#">Ayuda</a></li>
         <li>
           <a href="index.html" class="btn-nav-login">
-            <i class="fa-regular fa-user"></i> Iniciar sesión
+            <i aria-hidden="true" class="fa-regular fa-user"></i> Iniciar sesión
           </a>
         </li>
       </ul>
@@ -34,78 +34,82 @@
   <main class="main-wrapper">
     
     <!-- Lado Izquierdo: Eslogan, Categorías y Beneficios de Registro (con clase extendida register-hero) -->
-    <div class="hero-content register-hero">
+    <section class="hero-content register-hero">
       <img src="img/logofinal.png" alt="Easy Ticket Logo" class="hero-logo">
       <h1>Tu próxima experiencia cultural</h1>
       <h2>Empieza aquí</h2>
       <p>Conecta con la música, el teatro, el arte y mucho más. Encuentra y asegura tus boletos en un solo lugar.</p>
       
-      <div class="category-bar">
-        <div class="cat-box">
-          <i class="fa-regular fa-calendar-days"></i>
+      <ul class="category-bar">
+        <li class="cat-box">
+          <i aria-hidden="true" class="fa-regular fa-calendar-days"></i>
           <span>Eventos</span>
-        </div>
-        <div class="cat-box">
-          <i class="fa-solid fa-music"></i>
+        </li>
+        <li class="cat-box">
+          <i aria-hidden="true" class="fa-solid fa-music"></i>
           <span>Música</span>
-        </div>
-        <div class="cat-box">
-          <i class="fa-solid fa-masks-theater"></i>
+        </li>
+        <li class="cat-box">
+          <i aria-hidden="true" class="fa-solid fa-masks-theater"></i>
           <span>Teatro</span>
-        </div>
-        <div class="cat-box">
-          <i class="fa-solid fa-landmark"></i>
+        </li>
+        <li class="cat-box">
+          <i aria-hidden="true" class="fa-solid fa-landmark"></i>
           <span>Arte</span>
-        </div>
-        <div class="cat-box">
-          <i class="fa-solid fa-book-open"></i>
+        </li>
+        <li class="cat-box">
+          <i aria-hidden="true" class="fa-solid fa-book-open"></i>
           <span>Cultura</span>
-        </div>
-      </div>
+        </li>
+      </ul>
 
       <!-- Beneficios Clave del Usuario -->
-      <div class="benefits-list">
-        <div class="benefit-item">
-          🎫 Boletos 100% Digitales
-        </div>
-        <div class="benefit-item">
-          🔒 Compra 100% Segura
-        </div>
-        <div class="benefit-item">
-          ⚡ Acceso Anticipado
-        </div>
-        <div class="benefit-item">
-          🎭 Variedad Cultural
-        </div>
-      </div>
-    </div>
+      <ul class="benefits-list">
+        <li class="benefit-item">
+          <span aria-hidden="true">🎫</span> Boletos 100% Digitales
+        </li>
+        <li class="benefit-item">
+          <span aria-hidden="true">🔒</span> Compra 100% Segura
+        </li>
+        <li class="benefit-item">
+          <span aria-hidden="true">⚡</span> Acceso Anticipado
+        </li>
+        <li class="benefit-item">
+          <span aria-hidden="true">🎭</span> Variedad Cultural
+        </li>
+      </ul>
+    </section>
 
     <!-- Lado Derecho: Tarjeta de Crear Cuenta (con clase register-card para mayor ancho) -->
-    <div class="card-container">
-      <div class="auth-card register-card">
+    <aside class="card-container" aria-label="Formulario de acceso">
+      <article class="auth-card register-card">
         <h2>Crea tu cuenta</h2>
         <p class="card-subtitle">Regístrate para comprar tus boletos</p>
         
         <form action="#" method="POST">
           <div class="input-field">
-            <i class="fa-regular fa-user"></i>
-            <input type="text" placeholder="Nombre completo" required>
+            <i aria-hidden="true" class="fa-regular fa-user"></i>
+            <label for="regName" class="visually-hidden">Nombre completo</label>
+            <input type="text" id="regName" name="name" placeholder="Nombre completo" autocomplete="name" required>
           </div>
 
           <div class="input-field">
-            <i class="fa-regular fa-envelope"></i>
-            <input type="email" placeholder="Correo electrónico" required>
+            <i aria-hidden="true" class="fa-regular fa-envelope"></i>
+            <label for="regEmail" class="visually-hidden">Correo electrónico</label>
+            <input type="email" id="regEmail" name="email" placeholder="Correo electrónico" autocomplete="email" required>
           </div>
 
           <div class="input-field">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" id="regPassword" placeholder="Contraseña" required>
-            <i class="fa-regular fa-eye toggle-eye" onclick="togglePasswordVisibility('regPassword')"></i>
+            <i aria-hidden="true" class="fa-solid fa-lock"></i>
+            <label for="regPassword" class="visually-hidden">Contraseña</label>
+            <input type="password" id="regPassword" name="password" placeholder="Contraseña" autocomplete="new-password" required>
+            <button type="button" class="toggle-eye" data-target="regPassword" aria-label="Mostrar u ocultar contraseña"><i aria-hidden="true" class="fa-regular fa-eye"></i></button>
           </div>
 
           <div class="input-field">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" id="confirmPassword" placeholder="Confirmar contraseña" required>
+            <i aria-hidden="true" class="fa-solid fa-lock"></i>
+            <label for="confirmPassword" class="visually-hidden">Confirmar contraseña</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar contraseña" autocomplete="new-password" required>
           </div>
 
           <div class="form-options form-options-terms">
@@ -116,7 +120,7 @@
           </div>
 
           <button type="submit" class="btn-submit">
-            Registrarse <i class="fa-solid fa-arrow-right"></i>
+            Registrarse <i aria-hidden="true" class="fa-solid fa-arrow-right"></i>
           </button>
         </form>
 
@@ -125,8 +129,8 @@
         <div class="card-footer">
           ¿Ya tienes una cuenta? <a href="index.html" class="blue-link">Inicia sesión</a>
         </div>
-      </div>
-    </div>
+      </article>
+    </aside>
 
   </main>
 
@@ -134,19 +138,21 @@
   <footer>
     <p>© 2026 Easy Ticket | Proyecto POU. Todos los derechos reservados. Universidad Centro Americana Jose Simeon Cañas</p>
     <div class="social-links">
-      <a href="#"><i class="fa-solid fa-e"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" aria-label="Easy Ticket"><i aria-hidden="true" class="fa-solid fa-e"></i></a>
+      <a href="#" aria-label="Instagram"><i aria-hidden="true" class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i aria-hidden="true" class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="X (Twitter)"><i aria-hidden="true" class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="YouTube"><i aria-hidden="true" class="fa-brands fa-youtube"></i></a>
     </div>
   </footer>
 
   <script>
-    function togglePasswordVisibility(id) {
-      const input = document.getElementById(id);
-      input.type = input.type === 'password' ? 'text' : 'password';
-    }
+    document.querySelectorAll('.toggle-eye').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var input = document.getElementById(btn.dataset.target);
+        input.type = input.type === 'password' ? 'text' : 'password';
+      });
+    });
   </script>
 </body>
 </html>
